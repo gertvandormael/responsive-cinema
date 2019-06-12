@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: Bronx;
+    src: url(Bronx\ Bystreets\ 1.4\ c\ PERSONAL\ USE\ ONLY.ttf);
+}
+
+/* General styles */
+body {
+    background-color: #050404;
+    color: #b7b2b2;
+    font-family: 'Merriweather', serif;
+    display: flex;
+    justify-content: center;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+h1 {
+    padding: 5px;
+    font-size: 32px;
+    font-family: Bronx;
+    color: #ad1f0f;
+}
+
+h2 {
+    color: #7f1a0f
+}
+
+h3 {
+    color: #7f1a0f
+}
+
+img {
+    width: 182px;
+    height: 286px;
+}
+
+/* Flexbox */
+.movie-roster {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-self: center;
+    max-width: 800px;
+}
+
+.movie-roster {
+    padding: 20px;
+}
+
+@media only screen and (max-width: 576px) {
+    input[type=text] {
+        border: #ad1f0f 2px solid;
+        border-radius: 5px;
+        padding: 10px;
+        background-image: url(../img/search.svg);
+        background-size: 25px 25px; 
+        background-repeat: no-repeat;
+        background-position: left;
+        width: 30px;
+        transition: width 0.4s ease-in-out;
+    }
+
+    input[type=text]:focus {
+        width: 100%;
+    }
+
+    .movie-roster {
+    }
+}
