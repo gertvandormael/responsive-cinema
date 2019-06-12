@@ -61,8 +61,12 @@ input[type=text] {
 }
 
 .movie-roster img {
-    width: 182px;
-    height: 286px;
+    width: 250px;
+    height: 320px;
+}
+
+.movie-info {
+    width: 200px;
 }
 
 /* Flexbox */
@@ -71,12 +75,18 @@ input[type=text] {
     flex-wrap: wrap;
     justify-content: center;
     align-self: center;
-    max-width: 800px;
+    max-width: 1000px;
 }
 
 .movie-poster {
+    display: flex;
+    flex-direction: column;
+}
+
+.movies {
     padding: 5px;
     margin-bottom: 25px;
+    display: flex;  
 }
 
 .location {
@@ -84,6 +94,7 @@ input[type=text] {
     justify-content: center;
     flex-direction: row;
 }
+
 
 /* Smartphones */
 @media only screen and (max-width: 576px) {
@@ -97,17 +108,21 @@ input[type=text] {
     }
 
     input[type=text]:focus {
-        width: 100%;
+        width: 150px;
     }
 
     img {
         max-width: 300px;
     }
-
+/* google maps */
     .inline-location {
         width: 300px;
         height: 300px;
     }
+/* show info on hover */
+    .movie-info {
+        display: none;
+    }    
 }
 
 /* Tablets */
