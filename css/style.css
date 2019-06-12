@@ -28,17 +28,36 @@ h1 {
     font-size: 32px;
     font-family: Bronx;
     color: #ad1f0f;
+    margin-bottom: 25px;
 }
 
 h2 {
-    color: #7f1a0f
+    color: #7f1a0f;
+    font-size: 22px;
 }
 
 h3 {
-    color: #7f1a0f
+    color: #7f1a0f;
+    font-size: 18px;
 }
 
 img {
+    display: flex;
+    justify-content: center;
+}
+
+/* search bar layout */
+input[type=text] {
+    border: #ad1f0f 2px solid;
+    border-radius: 5px;
+    padding: 10px 10px 10px 30px;
+    background-image: url(../img/search.svg);
+    background-size: 25px 25px; 
+    background-repeat: no-repeat;
+    background-position: left;
+}
+
+.movie-roster img {
     width: 182px;
     height: 286px;
 }
@@ -52,19 +71,15 @@ img {
     max-width: 800px;
 }
 
-.movie-roster {
-    padding: 20px;
+.movie-poster {
+    padding: 5px;
+    margin-bottom: 25px;
 }
 
+/* Smartphones */
 @media only screen and (max-width: 576px) {
+    /* Expanding search bar */
     input[type=text] {
-        border: #ad1f0f 2px solid;
-        border-radius: 5px;
-        padding: 10px;
-        background-image: url(../img/search.svg);
-        background-size: 25px 25px; 
-        background-repeat: no-repeat;
-        background-position: left;
         width: 30px;
         transition: width 0.4s ease-in-out;
     }
@@ -73,6 +88,25 @@ img {
         width: 100%;
     }
 
-    .movie-roster {
+    img {
+        width: auto;
+        max-width: 400px;
+    }
+}
+
+/* Tablets */
+@media only screen and (min-width: 577px) and (max-width: 768px) {
+    input[type=text] {
+        width: 30px;
+        transition: width 0.4s ease-in-out;
+    }
+
+    input[type=text]:focus {
+        width: 100%;
+    }
+
+    img {
+        width: auto;
+        max-width: 600px;
     }
 }
