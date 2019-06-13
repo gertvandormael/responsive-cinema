@@ -99,7 +99,7 @@ img {
 }
 
 .movie-roster img {
-    width: 250px;
+    width: 240px;
     height: 320px;
 }
 
@@ -154,7 +154,6 @@ footer {
     /* Expanding search bar on focus */
     input[type=text] {
         width: 50px;
-        transition: width 0.4s ease-in-out;
     }
 
     input[type=text]:focus {
@@ -177,7 +176,6 @@ footer {
 @media only screen and (min-width: 577px) and (max-width: 768px) {
     input[type=text] {
         width: 50px;
-        transition: width 0.4s ease-in-out;
     }
 
     input[type=text]:focus {
@@ -188,9 +186,13 @@ footer {
 @media only screen and (min-width: 769px) and (max-width: 992px) {
     input[type=text] {
         width: 250px;
+
     }
-}    
-    
+
+    input[type=text]:focus {
+        width: 100%;
+    }
+}    s 
 
 @media only screen and (min-width: 993px) {
     input[type=text] {
