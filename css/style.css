@@ -9,67 +9,13 @@
     src: url(Bronx\ Bystreets\ 1.4\ c\ PERSONAL\ USE\ ONLY.ttf);
 }
 
-/* General styles */
-body {
-    background-color: #050404;
-    color: #b7b2b2;
-    font-family: 'Merriweather', serif;
-    display: flex;
-    justify-content: center;
-}
-
+/* Flexbox */
 .top-bar {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-header {
-    margin-bottom: 30px;
-}
-
-h1 {
-    font-size: 32px;
-    font-family: Bronx;
-    color: #ad1f0f;
-}
-
-h2 {
-    color: #7f1a0f;
-    font-size: 22px;
-}
-
-h3 {
-    color: #7f1a0f;
-    font-size: 18px;
-}
-
-img {
-    width: auto;
-}
-
-/* search bar layout */
-input[type=text] {
-    height: 50px;
-    border: #ad1f0f 2px solid;
-    border-radius: 5px;
-    padding: 5px 5px 5px 40px;
-    background-image: url(../img/search.svg);
-    background-size: 30px 30px; 
-    background-repeat: no-repeat;
-    background-position: 5px
-}
-
-.movie-roster img {
-    width: 250px;
-    height: 320px;
-}
-
-.movie-info {
-    width: 200px;
-}
-
-/* Flexbox */
 .movie-roster {
     display: flex;
     flex-wrap: wrap;
@@ -84,42 +30,131 @@ input[type=text] {
 }
 
 .movies {
-    padding: 5px;
+    padding: 2px 2px 2px 10px;
     margin-bottom: 25px;
-    display: flex;  
+    display: flex; 
 }
 
 .location {
     display: flex;
     justify-content: center;
-    flex-direction: row;
+    flex-direction: column;
+    padding: 10px 10px
 }
 
+/* Body and header styles */
+body {
+    background-color: #260000;
+    color: #ffffff;
+    font-family: 'Noto Sans HK', sans-serif;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+}
+
+header {
+    margin-bottom: 30px;
+}
+
+header p {
+    padding-left: 10px;
+}
+
+h1 {
+    color: #FF3838;
+    font-size: 46px;
+    font-family: Bronx;
+    padding: 5px 5px 0px 5px;
+}
+
+h2 {
+    color: #A5A5A5;
+    font-size: 32px;
+}
+
+h3 {
+    display: inline;
+    color: #A5A5A5;
+    font-size: 22px;
+    border-bottom: 2px solid #A5A5A5;
+    border-radius: 5px;
+}
+
+
+/* search bar layout */
+input[type=text] {
+    height: 50px;
+    border: #ad1f0f 2px solid;
+    border-radius: 5px;
+    padding: 5px 5px 5px 40px;
+    background-image: url(../img/search.svg);
+    background-size: 30px 30px; 
+    background-repeat: no-repeat;
+    background-position: 5px
+}
+
+/* Movie roster */
+img {
+    width: auto;
+}
+
+.movie-roster img {
+    width: 250px;
+    height: 320px;
+}
+
+.movie-info {
+    width: 200px;
+    padding-left: 5px;
+}
+
+button {
+    width: 80px;
+    height: 40px;
+    background-color: #FF3838;
+    border: none;
+    color: #260000
+    
+}
+
+/* Location and footer */
+.inline-location {
+    width: auto;
+}
+
+.fab {
+    font-size: 36px;
+    padding: 10px;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
 
 /* Smartphones */
 @media only screen and (max-width: 576px) {
     h1 {
         width: 25px;
     }
-    /* Expanding search bar */
+    /* Expanding search bar on focus */
     input[type=text] {
         width: 50px;
         transition: width 0.4s ease-in-out;
     }
 
     input[type=text]:focus {
-        width: 150px;
+        width: 100px;
     }
 
-    img {
-        max-width: 300px;
-    }
-/* google maps */
+    /* google maps */
     .inline-location {
-        width: 300px;
-        height: 300px;
+        min-width: 250px;
+        max-width: 500px;
     }
-/* show info on hover */
+
+    /* hide movie info on smartphone */
     .movie-info {
         display: none;
     }    
@@ -135,33 +170,17 @@ input[type=text] {
     input[type=text]:focus {
         width: 100%;
     }
-
-    img {
-        max-width: 600px;
-    }
 }
 
 @media only screen and (min-width: 769px) and (max-width: 992px) {
     input[type=text] {
         width: 250px;
     }
+}    
     
-    img {
-        max-width: 800px;
-    }
-    
-.movie-roster {
-    display: flex;
-    flex-grow: 2;
-}
-}
 
 @media only screen and (min-width: 993px) {
     input[type=text] {
         width: 250px;
-    }
-
-    img {
-        max-width: 1000px;;
     }
 }
