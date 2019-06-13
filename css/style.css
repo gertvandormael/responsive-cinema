@@ -109,12 +109,20 @@ img {
 }
 
 button {
-    width: 80px;
+    width: auto;
+    margin-top: 5px;
+    font-size: 22px;
     height: 40px;
     background-color: #FF3838;
     border: none;
-    color: #260000
-    
+    color: #260000;
+    border-radius: 10px;
+
+}
+
+button:hover {
+    background-color: #000000;
+    color: #A5A5A5;
 }
 
 /* Location and footer */
@@ -123,8 +131,13 @@ button {
 }
 
 .fab {
-    font-size: 36px;
-    padding: 10px;
+    font-size: 42px;
+    padding: 10px 10px 10px 20px;
+    color: #FF3838;
+}
+
+.fab:hover {
+    color: #A5A5A5;
 }
 
 footer {
